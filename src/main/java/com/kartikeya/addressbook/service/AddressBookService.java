@@ -1,15 +1,23 @@
 package com.kartikeya.addressbook.service;
 
 /*
- * Service Layer
+ * In-memory storage
  */
+import java.util.*;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AddressBookService {
 
-    // sample method
-    public String getData() {
-        return "Service layer working";
+    private List<String> data = new ArrayList<>();
+
+    // add
+    public void add(String value) {
+        data.add(value);
+    }
+
+    // get all
+    public List<String> getAll() {
+        return data;
     }
 }
